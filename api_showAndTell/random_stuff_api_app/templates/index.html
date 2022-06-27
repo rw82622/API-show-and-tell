@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Stuff API Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous" defer></script>
+</head>
+<body class="container" style="background-color: #d3d7d8">
+    <nav class="hstack gap-3" style="margin-top: 20px; margin-bottom: 20px;">
+        <a href="/"><button class="btn btn-outline-primary btn-lg">Home</button></a>
+        <hr>
+      </nav>
+    <h1>Welcome to Random Stuff API Demo!</h1>
+    <form method="POST" style="width: 30%; padding-top: 20px">
+        {% csrf_token %}
+        <label for="type">Type</label>
+        <input type="text" name="tpye" value="Joke" class="form-control" disabled/>
+        <br />
+        <label for="category">Category</label>
+        <select name="category" class="form-control drop-down">
+            <option value="sport">sport</option>
+            <option value="men">men</option>
+            <option value="women">women</option>
+            <option value="women">christian</option>
+            <option value="women">attitude</option>
+            <option value="women">life</option>
+            <option value="women">love</option>
+            <option value="women">people</option>
+            <option value="women">flirty</option>
+        </select>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% block div %} {% endblock %}
+</body>
+</html>
